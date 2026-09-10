@@ -1,0 +1,38 @@
+STATICS II — PUBLIC READING EDITION
+
+30 lecture chapters; 55 reading entries; 75 solved problems;
+53 engineering figures; 376 rendered equations; 15 derivation blocks.
+
+PUBLIC PACKAGE CHECKS
+All local page links and fragments resolve; no duplicate IDs.
+No runtime scripts or remote assets are required.
+The complete textbook matches the expected chapter and content inventories.
+The archive contains the exact HTML, verification, and third-party notice files.
+SHA-256 hashes of the public HTML appear below.
+
+EDITORIAL AUDIT
+The preceding course audit reported 1908 structural/link/equilibrium checks,
+237 revision assertions, and 64 successful static skill-script runs.
+These historical audit checks are not rerun by this public packaging script.
+This public export preserves the lecture material, equations, and diagrams;
+branding and administrative descriptions were edited for independent sharing.
+Standalone SVG figures were raster-inspected during the preceding audit.
+
+LIMITS
+Browser layout, animation, responsive, and print behavior remain unverified.
+Static package checks are not independent peer review of the mathematics.
+No equivalence to unseen third-party course materials is claimed.
+
+REPACKAGE
+Run python tools/package.py from the repository root after editing the HTML.
+
+HTML SHA-256
+f351469e3e09274cf1e3330024cc84b8c2ba5d43ea8d1edbce1c5958ddea5de0  about.html
+96e8324775fc89d51899fe4c510657757873883e741c29f927d6666c255829f1  audit-report.html
+6e5fa8fbe5615529607c3ab5fbec5f208a972660222bdbe68e1315a5abb4853f  complete-course.html
+a12465ebcc9d01a9b7b8a9c95d305a1fbe4fa9afafe21cb70124862bc56d6f6e  index.html
+5f9ff676f3a7f38330dcfbaeac111cc7745547c705d7f2477b7d661454ec17b9  module-1.html
+e8458e5daaa4de446d34434d75dd3cb709e49a5cc0f57b0f75ba7adbdf397109  module-2.html
+ba715e316ae78ca8ed0e7bb943f087195df6be5084faf9b0d95a8ea52acfd53b  module-3.html
+f6a9717043bc5e1930b38300e0d651d8851c2332027ef5d13392b790afae148b  module-4.html
+0d8e02c377c87e9ba5634f903d97793527215fcc1fbeaf3dd6c4e6ebfa38a5f2  module-5.html

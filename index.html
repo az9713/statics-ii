@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Original offline Statics II textbook with rendered equations, SVG diagrams, and worked problems" name="description"/>
+<meta content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; font-src 'none'; script-src 'none'; base-uri 'none'" http-equiv="Content-Security-Policy"/>
+<title>
+   Engineering Mechanics: Statics II
+  </title>
+<style>
+   :root{--ink:#182e40;--muted:#526b7a;--accent:#006e78;--paper:#fff;--ground:#edf3f7;--line:#c6d5df;--load:#a22e46}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:25px}body{margin:0;background:var(--ground);color:var(--ink);font:18px/1.75 Cambria,'Times New Roman',serif}a{color:var(--accent);text-underline-offset:3px}a:hover{color:var(--load)}a:focus-visible,summary:focus-visible{outline:3px solid var(--load);outline-offset:4px}.layout{max-width:1480px;margin:auto;display:grid;grid-template-columns:275px minmax(0,1fr)}aside{padding:32px 24px;position:sticky;top:0;height:100vh;overflow:auto;font:14px/1.5 'Segoe UI',Arial,sans-serif}aside a{display:block;padding:7px 0;text-decoration:none}aside strong{display:block;font-size:17px;margin-bottom:18px}main{background:white;padding:55px clamp(25px,6vw,85px);min-width:0}header{border-top:7px solid var(--accent);padding-top:25px;margin-bottom:45px}.eyebrow{font:700 13px/1.5 'Segoe UI',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}h1,h2,h3,h4{font-family:'Segoe UI',Arial,sans-serif;line-height:1.22;letter-spacing:-.02em}h1{font-size:clamp(32px,4vw,51px);max-width:1000px}h2{font-size:30px;margin-top:55px}h3{font-size:22px;margin-top:32px}p{max-width:82ch;margin:1em 0}.lede{font-size:22px;line-height:1.55;color:var(--muted)}.lecture{border-top:1px solid var(--line);padding-top:25px;margin-top:55px}.lecture>h2{margin-top:10px}.note{padding:18px 23px;border-left:4px solid var(--accent);background:#f0f7f8;font-size:17px}.equation{overflow-x:auto;padding:18px 8px;margin:22px 0;text-align:center;background:#f7fafc;border-block:1px solid #e1eaf0}.math-inline{white-space:nowrap}.math-inline svg{max-width:none}.engineering{margin:30px 0;background:#f6f9fc;border:1px solid var(--line);padding:14px}.engineering>svg{width:100%;height:auto;display:block}.engineering figcaption{font:14px/1.55 'Segoe UI',Arial,sans-serif;color:var(--muted);padding:12px 10px 4px}.problem{margin:25px 0;padding:18px 23px;border:1px solid var(--line)}.problem h4{margin:0;font-size:18px}.problem details{margin-top:12px}.problem summary{cursor:pointer;color:var(--accent);font:600 15px/1.5 'Segoe UI',Arial,sans-serif;padding:8px 0}.problem details[open]{border-top:1px solid var(--line)}.solution{padding:5px 0}.reading{padding:16px 0;border-bottom:1px solid var(--line)}.reading h3{font-size:19px;margin:0}.reading p{font-size:16px;margin:.5em 0}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font:14px/1.5 'Segoe UI',Arial,sans-serif;margin:20px 0}th,td{text-align:left;vertical-align:top;padding:11px 12px;border-bottom:1px solid var(--line)}th{background:#e8f0f4}td:first-child{white-space:nowrap}.module-link{padding:24px 0;border-bottom:1px solid var(--line)}.module-link h2{margin:0 0 10px;font-size:25px}.module-link p{margin:0;font-size:17px}.meta{font:14px/1.6 'Segoe UI',Arial,sans-serif;color:var(--muted)}footer{margin-top:50px;padding-top:25px;border-top:1px solid var(--line);font-size:15px}.skip{position:absolute;left:-10000px}.skip:focus{left:15px;top:15px;background:white;z-index:5;padding:15px}.coverage-note{font-size:16px}mjx-container{display:inline-block;max-width:100%}mjx-container[display="true"]{display:block;margin:0}mjx-container svg{overflow:visible}svg{color:var(--ink)}.backtop{font-size:14px}.divider{margin-top:70px;border-top:5px solid var(--accent);padding-top:30px}@media(max-width:900px){.layout{display:block}aside{position:relative;height:auto;max-height:280px;border-bottom:1px solid var(--line)}main{padding:30px 22px}body{font-size:17px}.equation{font-size:90%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{body{background:white;font-size:11pt;line-height:1.5}aside,.skip,.backtop{display:none}.layout{display:block}main{padding:0}a{color:inherit;text-decoration:none}h1{font-size:28pt}h2{font-size:20pt;break-after:avoid}h3{font-size:14pt;break-after:avoid}.lecture{break-before:page}.problem,.engineering,.equation{break-inside:avoid}.engineering{max-width:170mm}.problem details{display:block}.problem details::details-content{display:block;content-visibility:visible}table{font-size:9pt}.table-wrap{overflow:visible}header{border-width:3px}.note{background:white}.equation{background:white}footer{font-size:9pt}}
+  .def,.prop,.thm,.lem{background:#eef6f7;border-left:4px solid #006e78;padding:18px 24px;margin:24px 0}.def p,.prop p{margin:.6em 0}.proof{border-left:2px solid #aebfc9;padding-left:22px;margin:20px 0 35px}.proof::before{content:'Derivation.';font-weight:bold;font-style:italic}.qed{display:block;text-align:right;color:#006e78}.figure-ref{font:14px/1.5 'Segoe UI',Arial,sans-serif;color:#526b7a}.engineering text{font-family:'Times New Roman','Times New Roman',serif}.motion-static{display:none}.problem-nav{font:15px/1.6 'Segoe UI',Arial,sans-serif}.problem-nav a{display:inline-block;margin:4px 12px 4px 0}.rev-tag{border:1px solid #b9cfd7;background:#f0f7f8;padding:10px 15px}.equation svg{max-width:none}.problem p{overflow-wrap:break-word}@media(prefers-reduced-motion:reduce){.motion-active{display:none}.motion-static{display:block}}@media print{.motion-active{display:none}.motion-static{display:block}.proof{border:0;padding:0}.def,.prop{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">
+   Skip to content
+  </a>
+<div class="layout">
+<aside>
+<strong>
+     Engineering Mechanics
+     <br/>
+     Statics II
+    </strong>
+<a href="index.html">
+     Course index
+    </a>
+<a href="module-1.html">
+     1. Frames and machines
+    </a>
+<a href="module-2.html">
+     2. Plane trusses
+    </a>
+<a href="module-3.html">
+     3. Space trusses and beams
+    </a>
+<a href="module-4.html">
+     4. Cable support systems
+    </a>
+<a href="module-5.html">
+     5. Coulomb and belt friction
+    </a>
+<hr/>
+<a href="#start">
+     Start here
+    </a>
+<a href="#study">
+     Study method
+    </a>
+<a href="#coverage">
+     Full syllabus coverage
+    </a>
+<a href="#scope">
+     Scope and provenance
+    </a>
+</aside>
+<main id="main">
+<header id="top">
+<div class="eyebrow">
+      An original engineering textbook
+     </div>
+<h1 id="index-heading-1">
+      Engineering Mechanics
+      <br/>
+      Statics II
+     </h1>
+<p class="lede">
+      From connected bodies to trusses, beams, cables, and friction. A complete prose course aligned with the five-module Applications in Engineering Mechanics syllabus.
+     </p>
+<p class="meta">
+      30 lecture chapters · 55 reading mappings · 5 module assessments · Cumulative final · Offline HTML
+     </p>
+<p class="rev-tag">Revised with the rigorous-explainer audit: 30 lecture chapters, explicit setup definitions, expanded derivations, and 75 solved problems.</p></header>
+<section id="start">
+<h2 id="index-heading-2">
+      Start here
+     </h2>
+<p>
+      This course assumes introductory statics, vectors, algebra, trigonometry, and basic calculus. Lecture 2 refreshes equilibrium. Every lesson explains the physical model before deriving equations, and examples show both the calculation and its checks. Coefficients and numerical data in problems are stipulated inputs.
+     </p>
+<p>
+      Open a module below or read the
+      <a href="complete-course.html">
+       entire textbook in one self-contained HTML file
+      </a>
+      . The module files are also independently readable. Download the
+      <a href="statics-ii-course.zip">
+       complete ZIP
+      </a>
+      to preserve all navigation links. No account, installation, internet connection, or JavaScript is needed for the teaching content.
+     </p>
+<div class="note">
+      This is an original syllabus-aligned textbook, not a transcription or official 'Times New Roman' Tech course. The visible syllabus fixes the topic order; it does not disclose the exact content of the videos, PDFs, worksheets, or quizzes. “Continued” lecture divisions are stated editorial choices. Administrative readings are identified, not fabricated.
+     </div>
+</section>
+<section class="module-link">
+<h2 id="index-heading-3">
+<a href="module-1.html">
+       1. Frames and machines
+      </a>
+</h2>
+<p>
+      Applications of the Equations of Static Equilibrium to Interacting Bodies or Parts of a Structure; Systems Containing Multi-force Members; Frames and Machines
+     </p>
+<p class="meta">
+      Lectures 1–5 · 5 lecture counterparts · 13 reading mappings
+     </p>
+</section>
+<section class="module-link">
+<h2 id="index-heading-4">
+<a href="module-2.html">
+       2. Plane trusses
+      </a>
+</h2>
+<p>
+      Plane Trusses
+     </p>
+<p class="meta">
+      Lectures 6–10 · 5 lecture counterparts · 11 reading mappings
+     </p>
+</section>
+<section class="module-link">
+<h2 id="index-heading-5">
+<a href="module-3.html">
+       3. Space trusses and beams
+      </a>
+</h2>
+<p>
+      Space Trusses; Shear Force and Bending Moment Diagrams
+     </p>
+<p class="meta">
+      Lectures 11–17 · 7 lecture counterparts · 11 reading mappings
+     </p>
+</section>
+<section class="module-link">
+<h2 id="index-heading-6">
+<a href="module-4.html">
+       4. Cable support systems
+      </a>
+</h2>
+<p>
+      Cable Support Systems
+     </p>
+<p class="meta">
+      Lectures 18–22 · 5 lecture counterparts · 8 reading mappings
+     </p>
+</section>
+<section class="module-link">
+<h2 id="index-heading-7">
+<a href="module-5.html">
+       5. Coulomb and belt friction
+      </a>
+</h2>
+<p>
+      Coulomb Friction and Belt Friction
+     </p>
+<p class="meta">
+      Lectures 23–30 · 8 lecture counterparts · 12 reading mappings
+     </p>
+</section>
+<section id="study">
+<h2 id="index-heading-8">
+      How to use a textbook-level course
+     </h2>
+<p>
+      Read one lecture, reconstruct its derivations with the text closed, and solve its examples before checking the printed calculation. Use the worksheets to consolidate a method, the practice problems to select methods independently, and the quiz to test retention. The source estimates five weeks; this expanded treatment is best paced by understanding rather than a fixed time promise.
+     </p>
+<p>
+      Equations are pre-rendered from LaTeX into embedded SVG. Diagrams are original SVG with text labels and captions. Browser search finds the prose and problem statements. Use the browser’s print command for a paper or PDF copy; expand any solutions you want included before printing, since print handling of collapsed details varies by browser.
+     </p>
+<p>
+      Two numbering systems are retained: five course modules and 30 lectures. The source calls lectures 2–30 “Module 2” through “Module 30”; the coverage table preserves those exact titles while the textbook uses “Lecture” to avoid ambiguity.
+     </p>
+</section>
+<section id="coverage">
+<h2 id="index-heading-9">
+      Complete syllabus coverage
+     </h2>
+<p class="coverage-note">
+      The tables preserve the ordering of every listed video and reading, including the suspension worksheet appearing before Lecture 22 in the source. Each video maps to an original prose chapter. Each PDF reading maps to that chapter as its HTML companion. Worksheet, practice, and quiz readings map to original material. The five graded assessments are separately represented in the module files.
+     </p>
+<h3 id="index-heading-10">
+      Module 1: Frames and machines
+     </h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+          Source order
+         </th>
+<th>
+          Exact syllabus item title
+         </th>
+<th>
+          This course
+         </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+          1. Reading
+         </td>
+<td>
+          Syllabus
+         </td>
+<td>
+<a href="module-1.html#m1-reading-1">
+           Orientation / source-service note
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          2. Reading
+         </td>
+<td>
+          Consent Form
+         </td>
+<td>
+<a href="module-1.html#m1-reading-2">
+           Orientation / source-service note
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          3. Video
+         </td>
+<td>
+          Course Introduction and Topics
+         </td>
+<td>
+<a href="module-1.html#lecture-1">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          4. Reading
+         </td>
+<td>
+          Pdf Version of Course Introduction and Topics
+         </td>
+<td>
+<a href="module-1.html#m1-reading-3">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          5. Video
+         </td>
+<td>
+          Module 2: Equilibrium Equations – Review from the course “Introduction to Engineering Mechanics”
+         </td>
+<td>
+<a href="module-1.html#lecture-2">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          6. Reading
+         </td>
+<td>
+          Further Study
+         </td>
+<td>
+<a href="module-1.html#m1-reading-4">
+           Orientation / source-service note
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          7. Reading
+         </td>
+<td>
+          Pdf Version of Module 2: Equilibrium Equations – Review from the course “Introduction to Engineering Mechanics” Lecture
+         </td>
+<td>
+<a href="module-1.html#m1-reading-5">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          8. Video
+         </td>
+<td>
+          Module 3: 2-Force Members and Multi-force Members; Introduction to Frames and Machines
+         </td>
+<td>
+<a href="module-1.html#lecture-3">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          9. Reading
+         </td>
+<td>
+          Pdf Version of Module 3: 2-Force Members and Multi-force Members; Introduction to Frames and Machines Lecture
+         </td>
+<td>
+<a href="module-1.html#m1-reading-6">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          10. Reading
+         </td>
+<td>
+          Worksheet Solutions: 2-Force Members and Multi-force Members; Introduction to Frames and Machines
+         </td>
+<td>
+<a href="module-1.html#m1-reading-7">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          11. Video
+         </td>
+<td>
+          Module 4: Frame Structures
+         </td>
+<td>
+<a href="module-1.html#lecture-4">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          12. Reading
+         </td>
+<td>
+          Pdf Version of Module 4: Frame Structures Lecture
+         </td>
+<td>
+<a href="module-1.html#m1-reading-8">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          13. Reading
+         </td>
+<td>
+          Worksheet Solutions: Frame Structures
+         </td>
+<td>
+<a href="module-1.html#m1-reading-9">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          14. Video
+         </td>
+<td>
+          Module 5: Machine Structures
+         </td>
+<td>
+<a href="module-1.html#lecture-5">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          15. Reading
+         </td>
+<td>
+          Pdf Version of Module 5: Machine Structures Lecture
+         </td>
+<td>
+<a href="module-1.html#m1-reading-10">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          16. Reading
+         </td>
+<td>
+          Worksheet Solutions: Machine Structures
+         </td>
+<td>
+<a href="module-1.html#m1-reading-11">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          17. Reading
+         </td>
+<td>
+          Practice Problems
+         </td>
+<td>
+<a href="module-1.html#m1-reading-12">
+           Original practice set
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          18. Reading
+         </td>
+<td>
+          Solution of Quiz 1
+         </td>
+<td>
+<a href="module-1.html#m1-reading-13">
+           Original quiz with solutions
+          </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="index-heading-11">
+      Module 2: Plane trusses
+     </h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+          Source order
+         </th>
+<th>
+          Exact syllabus item title
+         </th>
+<th>
+          This course
+         </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+          1. Video
+         </td>
+<td>
+          Module 6: Introduction - Truss Structures
+         </td>
+<td>
+<a href="module-2.html#lecture-6">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          2. Reading
+         </td>
+<td>
+          Pdf Version of Module 6: Introduction - Truss Structures Lecture
+         </td>
+<td>
+<a href="module-2.html#m2-reading-1">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          3. Video
+         </td>
+<td>
+          Module 7: Truss Structures - Method of Joints
+         </td>
+<td>
+<a href="module-2.html#lecture-7">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          4. Reading
+         </td>
+<td>
+          Pdf Version of Module 7: Truss Structures - Method of Joints Lecture
+         </td>
+<td>
+<a href="module-2.html#m2-reading-2">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          5. Reading
+         </td>
+<td>
+          Worksheet Solutions: Truss Structures - Method of Joints
+         </td>
+<td>
+<a href="module-2.html#m2-reading-3">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          6. Video
+         </td>
+<td>
+          Module 8: Truss Structures - Method of Sections
+         </td>
+<td>
+<a href="module-2.html#lecture-8">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          7. Reading
+         </td>
+<td>
+          Pdf Version of Module 8: Truss Structures - Method of Sections Lecture
+         </td>
+<td>
+<a href="module-2.html#m2-reading-4">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          8. Video
+         </td>
+<td>
+          Module 9: Truss Structures - Method of Sections (cont.)
+         </td>
+<td>
+<a href="module-2.html#lecture-9">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          9. Reading
+         </td>
+<td>
+          Pdf Version of Module 9: Truss Structures - Method of Sections (cont.) Lecture
+         </td>
+<td>
+<a href="module-2.html#m2-reading-5">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          10. Reading
+         </td>
+<td>
+          Worksheet Solutions: Truss Structures - Method of Sections
+         </td>
+<td>
+<a href="module-2.html#m2-reading-6">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          11. Video
+         </td>
+<td>
+          Module 10: Truss Structures - Zero Force Members
+         </td>
+<td>
+<a href="module-2.html#lecture-10">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          12. Reading
+         </td>
+<td>
+          Pdf Version of Module 10: Truss Structures - Zero Force Members Lecture
+         </td>
+<td>
+<a href="module-2.html#m2-reading-7">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          13. Reading
+         </td>
+<td>
+          Worksheet Solutions: Truss Structures - Zero Force Members
+         </td>
+<td>
+<a href="module-2.html#m2-reading-8">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          14. Reading
+         </td>
+<td>
+          Self-Study and Credentials
+         </td>
+<td>
+<a href="module-2.html#m2-reading-9">
+           Orientation / source-service note
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          15. Reading
+         </td>
+<td>
+          Practice Problems
+         </td>
+<td>
+<a href="module-2.html#m2-reading-10">
+           Original practice set
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          16. Reading
+         </td>
+<td>
+          Solution of Quiz 2
+         </td>
+<td>
+<a href="module-2.html#m2-reading-11">
+           Original quiz with solutions
+          </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="index-heading-12">
+      Module 3: Space trusses and beams
+     </h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+          Source order
+         </th>
+<th>
+          Exact syllabus item title
+         </th>
+<th>
+          This course
+         </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+          1. Video
+         </td>
+<td>
+          Module 11: Space Trusses
+         </td>
+<td>
+<a href="module-3.html#lecture-11">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          2. Reading
+         </td>
+<td>
+          Pdf Version of Module 11: Space Trusses Lecture
+         </td>
+<td>
+<a href="module-3.html#m3-reading-1">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          3. Video
+         </td>
+<td>
+          Module 12: Space Trusses (cont.)
+         </td>
+<td>
+<a href="module-3.html#lecture-12">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          4. Reading
+         </td>
+<td>
+          Pdf Version of Module 12: Space Trusses (cont.) Lecture
+         </td>
+<td>
+<a href="module-3.html#m3-reading-2">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          5. Video
+         </td>
+<td>
+          Module 13: Space Trusses (cont.)
+         </td>
+<td>
+<a href="module-3.html#lecture-13">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          6. Reading
+         </td>
+<td>
+          Pdf Version of Module 13: Space Trusses (cont.) Lecture
+         </td>
+<td>
+<a href="module-3.html#m3-reading-3">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          7. Reading
+         </td>
+<td>
+          Worksheet Solutions: Space Trusses
+         </td>
+<td>
+<a href="module-3.html#m3-reading-4">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          8. Video
+         </td>
+<td>
+          Module 14: Introduction – Shear Force and Bending Moment Diagrams
+         </td>
+<td>
+<a href="module-3.html#lecture-14">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          9. Reading
+         </td>
+<td>
+          Pdf Version of Module 14: Introduction – Shear Force and Bending Moment Diagrams Lecture
+         </td>
+<td>
+<a href="module-3.html#m3-reading-5">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          10. Video
+         </td>
+<td>
+          Module 15: Shear Force Diagrams
+         </td>
+<td>
+<a href="module-3.html#lecture-15">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          11. Reading
+         </td>
+<td>
+          Pdf Version of Module 15: Shear Force Diagrams Lecture
+         </td>
+<td>
+<a href="module-3.html#m3-reading-6">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          12. Video
+         </td>
+<td>
+          Module 16: Bending Moment Diagrams
+         </td>
+<td>
+<a href="module-3.html#lecture-16">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          13. Reading
+         </td>
+<td>
+          Pdf Version of Module 16: Bending Moment Diagrams Lecture
+         </td>
+<td>
+<a href="module-3.html#m3-reading-7">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          14. Video
+         </td>
+<td>
+          Module 17: Shear Force and Bending Moment Diagrams – Examples
+         </td>
+<td>
+<a href="module-3.html#lecture-17">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          15. Reading
+         </td>
+<td>
+          Pdf Version of Module 17: Shear Force and Bending Moment Diagrams – Examples Lecture
+         </td>
+<td>
+<a href="module-3.html#m3-reading-8">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          16. Reading
+         </td>
+<td>
+          Worksheet Solutions: Shear Force and Bending Moment Diagrams - Examples
+         </td>
+<td>
+<a href="module-3.html#m3-reading-9">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          17. Reading
+         </td>
+<td>
+          Practice Problems
+         </td>
+<td>
+<a href="module-3.html#m3-reading-10">
+           Original practice set
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          18. Reading
+         </td>
+<td>
+          Solution of Quiz 3
+         </td>
+<td>
+<a href="module-3.html#m3-reading-11">
+           Original quiz with solutions
+          </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="index-heading-13">
+      Module 4: Cable support systems
+     </h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+          Source order
+         </th>
+<th>
+          Exact syllabus item title
+         </th>
+<th>
+          This course
+         </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+          1. Video
+         </td>
+<td>
+          Module 18: Introduction – Cable Support Systems
+         </td>
+<td>
+<a href="module-4.html#lecture-18">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          2. Reading
+         </td>
+<td>
+          Pdf Version of Module 18: Introduction – Cable Support Systems Lecture
+         </td>
+<td>
+<a href="module-4.html#m4-reading-1">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          3. Video
+         </td>
+<td>
+          Module 19: Cable Support Systems - Concentrated Loads
+         </td>
+<td>
+<a href="module-4.html#lecture-19">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          4. Reading
+         </td>
+<td>
+          Pdf Vresion of Module 19: Cable Support Systems - Concentrated Loads Lecture
+         </td>
+<td>
+<a href="module-4.html#m4-reading-2">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          5. Video
+         </td>
+<td>
+          Module 20: Cable Support Systems - Concentrated Loads (cont.)
+         </td>
+<td>
+<a href="module-4.html#lecture-20">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          6. Reading
+         </td>
+<td>
+          Pdf Version of Module 20: Cable Support Systems - Concentrated Loads (cont.) Lecture
+         </td>
+<td>
+<a href="module-4.html#m4-reading-3">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          7. Video
+         </td>
+<td>
+          Module 21: Cable Support Systems - Concentrated Loads (cont.)
+         </td>
+<td>
+<a href="module-4.html#lecture-21">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          8. Reading
+         </td>
+<td>
+          Pdf Version of Module 21: Cable Support Systems - Concentrated Loads (cont.) Lecture
+         </td>
+<td>
+<a href="module-4.html#m4-reading-4">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          9. Reading
+         </td>
+<td>
+          Worksheet Solutions: Cable Support Systems - Suspension Loads
+         </td>
+<td>
+<a href="module-4.html#m4-reading-5">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          10. Video
+         </td>
+<td>
+          Module 22: Cable Support Systems – Suspension Loads
+         </td>
+<td>
+<a href="module-4.html#lecture-22">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          11. Reading
+         </td>
+<td>
+          Pdf Version of Module 22: Cable Support Systems – Suspension Loads Lecture
+         </td>
+<td>
+<a href="module-4.html#m4-reading-6">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          12. Reading
+         </td>
+<td>
+          Practice Problems
+         </td>
+<td>
+<a href="module-4.html#m4-reading-7">
+           Original practice set
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          13. Reading
+         </td>
+<td>
+          Solution of Quiz 4
+         </td>
+<td>
+<a href="module-4.html#m4-reading-8">
+           Original quiz with solutions
+          </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="index-heading-14">
+      Module 5: Coulomb and belt friction
+     </h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>
+          Source order
+         </th>
+<th>
+          Exact syllabus item title
+         </th>
+<th>
+          This course
+         </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+          1. Video
+         </td>
+<td>
+          Module 23: Introduction – Coulomb Friction
+         </td>
+<td>
+<a href="module-5.html#lecture-23">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          2. Reading
+         </td>
+<td>
+          Pdf Version of Module 23: Introduction – Coulomb Friction Lecture
+         </td>
+<td>
+<a href="module-5.html#m5-reading-1">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          3. Video
+         </td>
+<td>
+          Module 24: Coulomb Friction (cont.)
+         </td>
+<td>
+<a href="module-5.html#lecture-24">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          4. Reading
+         </td>
+<td>
+          Pdf Version of Module 24: Coulomb Friction (cont.) Lecture
+         </td>
+<td>
+<a href="module-5.html#m5-reading-2">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          5. Reading
+         </td>
+<td>
+          Worksheet Solutions: Coulomb Friction
+         </td>
+<td>
+<a href="module-5.html#m5-reading-3">
+           Original solved worksheet
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          6. Video
+         </td>
+<td>
+          Module 25: Coulomb Friction (cont.)
+         </td>
+<td>
+<a href="module-5.html#lecture-25">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          7. Reading
+         </td>
+<td>
+          Pdf Version of Module 25: Coulomb Friction (cont.) Lecture
+         </td>
+<td>
+<a href="module-5.html#m5-reading-4">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          8. Video
+         </td>
+<td>
+          Module 26: Coulomb Friction (cont.)
+         </td>
+<td>
+<a href="module-5.html#lecture-26">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          9. Reading
+         </td>
+<td>
+          Pdf Version of Module 26: Coulomb Friction (cont.) Lecture
+         </td>
+<td>
+<a href="module-5.html#m5-reading-5">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          10. Video
+         </td>
+<td>
+          Module 27: Coulomb Friction (cont.)
+         </td>
+<td>
+<a href="module-5.html#lecture-27">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          11. Reading
+         </td>
+<td>
+          Pdf Version of Module 27: Coulomb Friction (cont.) Lecture
+         </td>
+<td>
+<a href="module-5.html#m5-reading-6">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          12. Video
+         </td>
+<td>
+          Module 28: Belt Friction
+         </td>
+<td>
+<a href="module-5.html#lecture-28">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          13. Reading
+         </td>
+<td>
+          Pdf Version of Module 28: Belt Friction Lecture
+         </td>
+<td>
+<a href="module-5.html#m5-reading-7">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          14. Video
+         </td>
+<td>
+          Module 29: Belt Friction - Examples
+         </td>
+<td>
+<a href="module-5.html#lecture-29">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          15. Reading
+         </td>
+<td>
+          Pdf Version of Module 29: Belt Friction - Examples Lecture
+         </td>
+<td>
+<a href="module-5.html#m5-reading-8">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          16. Reading
+         </td>
+<td>
+          Where to go from here?
+         </td>
+<td>
+<a href="module-5.html#m5-reading-9">
+           Orientation / source-service note
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          17. Video
+         </td>
+<td>
+          Module 30: Course Wrap-up
+         </td>
+<td>
+<a href="module-5.html#lecture-30">
+           Original textbook chapter
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          18. Reading
+         </td>
+<td>
+          Pdf Version of Module 30: Course Wrap-up Lecture
+         </td>
+<td>
+<a href="module-5.html#m5-reading-10">
+           Chapter companion reading
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          19. Reading
+         </td>
+<td>
+          Practice Problems
+         </td>
+<td>
+<a href="module-5.html#m5-reading-11">
+           Original practice set
+          </a>
+</td>
+</tr>
+<tr>
+<td>
+          20. Reading
+         </td>
+<td>
+          Solution of Quiz 5
+         </td>
+<td>
+<a href="module-5.html#m5-reading-12">
+           Original quiz with solutions
+          </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="scope">
+<h2 id="index-heading-15">
+      Scope, notation, and limits
+     </h2>
+<p>
+      SI units are the default. Tension is positive for truss members. Each beam, cable, or contact model declares its own directions before using signed equations. Equilibrium does not by itself establish strength, stability, or contact feasibility; the course explicitly distinguishes these tests.
+     </p>
+<p>The course covers the listed statics subjects with supporting derivations, examples, and a cumulative assessment. Administrative entries explain the scope of this self-study edition.</p>
+<p>Technical references are linked at the end of each module. <a href="verification.txt">Read the verification record</a>.</p>
+<p><a href="audit-report.html">Read the audit findings and verification limits</a></p></section>
+<footer>
+     Original textbook edition · 9 September 2026 · All teaching content is embedded for offline use.
+    </footer>
+</main>
+</div>
+<p style="text-align:center"><a href="about.html">About this edition and third-party notices</a></p></body>
+</html>
