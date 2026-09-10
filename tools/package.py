@@ -92,7 +92,7 @@ Run python tools/package.py from the repository root after editing the HTML.
 HTML SHA-256
 """
     receipt += '\n'.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name for p in html)+'\n'
-    (ROOT/'verification.txt').write_text(receipt,encoding='utf-8')
+    (ROOT/'verification.txt').write_text(receipt,encoding='utf-8',newline='\n')
     items = html + [ROOT/'verification.txt'] + sorted((ROOT/'third-party').glob('*'))
     archive = ROOT/'statics-ii-course.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
